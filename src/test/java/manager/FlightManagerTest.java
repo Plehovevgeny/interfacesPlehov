@@ -10,10 +10,10 @@ class FlightManagerTest {
     Ticket ticket1 = new Ticket(1, 5000, "Kolcovo", "Sheremetevo", 150);
     Ticket ticket2 = new Ticket(2, 6000, "Kolcovo", "Sheremetevo", 151);
     Ticket ticket3 = new Ticket(3, 7000, "Kolcovo", "Sheremetevo1", 152);
-    Ticket ticket4 = new Ticket(4, 8000, "Kolcovo", "Sheremetevo", 152);
-    Ticket ticket5 = new Ticket(5, 9000, "Kolcovo", "Sheremetevo1", 152);
-    Ticket ticket6 = new Ticket(5, 10000, "Kolcovo1", "Sheremetevo", 152);
-    Ticket ticket7 = new Ticket(5, 11000, "Kolcovo1", "Sheremetevo", 152);
+    Ticket ticket4 = new Ticket(4, 8000, "Kolcovo", "Sheremetevo", 153);
+    Ticket ticket5 = new Ticket(5, 9000, "Kolcovo", "Sheremetevo1", 154);
+    Ticket ticket6 = new Ticket(6, 10000, "Kolcovo1", "Sheremetevo", 155);
+    Ticket ticket7 = new Ticket(7, 11000, "Kolcovo1", "Sheremetevo", 156);
 
     @Test
     public void shouldFindAll() {
