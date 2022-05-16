@@ -4,6 +4,7 @@ import repository.TicketsRepository;
 import tickets.Ticket;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class FlightManager {
 
@@ -34,7 +35,7 @@ public class FlightManager {
         repository.add(ticket);
     }
 
-    public Ticket[] findAll(String from, String to) {
+    public Ticket[] findAll(String from, String to, Comparator<Ticket> comparator) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repository.findAll()) {
             if (matches(ticket, from, to)) {
@@ -46,18 +47,18 @@ public class FlightManager {
                 result = tmp;
             }
         }
-        //сортировка по увеличению price
-        Arrays.sort(result);
+        //сортировка по увеличению price или самому маленькому времени
+        Arrays.sort(result, comparator);
         return result;
     }
 
     // метод определения соответствия ticket запросу findAll
 
     public boolean matches(Ticket ticket, String from, String to) {
-        if (ticket.getFrom() != from) {
+        if (!ticket.getFrom().equals(from)) {
             return false;
         }
-        if (ticket.getTo() != to) {
+        if (!ticket.getTo().equals(to)) {
             return false;
         }
         return true;
