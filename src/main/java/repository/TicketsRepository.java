@@ -43,17 +43,4 @@ public class TicketsRepository {
         return getTickets();
     }
 
-    //удаление билетов из репозитория
-
-//    public void removeId(int id) {
-//        Ticket[] tmp = new Ticket[tickets.length - 1];
-//        int i = 0;
-//        for (Ticket ticket : tickets) {
-//            if (ticket.getId() != id) {
-//                tmp[i] = ticket;
-//                i++;
-//            }
-//        }
-//        tickets = tmp;
-//    }
 }

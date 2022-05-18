@@ -16,6 +16,26 @@ class FlightManagerTest {
     Ticket ticket7 = new Ticket(7, 11000, "Kolcovo1", "Sheremetevo", 156);
 
     @Test
+    public void shouldFindAllEmptyTickets() {
+
+        Ticket[] expected = new Ticket[]{};
+        Ticket[] actual = manager.findAll("Kolcovo", "Sheremetevo");
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindAllOneTicket() {
+
+        manager.add(ticket1);
+
+        Ticket[] expected = new Ticket[]{ticket1};
+        Ticket[] actual = manager.findAll("Kolcovo", "Sheremetevo");
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void shouldFindAll() {
 
         manager.add(ticket1);

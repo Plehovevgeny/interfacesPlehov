@@ -54,16 +54,12 @@ public class FlightManager {
     // метод определения соответствия ticket запросу findAll
 
     public boolean matches(Ticket ticket, String from, String to) {
-        if (ticket.getFrom() != from) {
+        if (!ticket.getFrom().equals(from)) {
             return false;
         }
-        if (ticket.getTo() != to) {
+        if (!ticket.getTo().equals(to)) {
             return false;
         }
         return true;
     }
-
-//    public void removeId(int id) {
-//        repository.removeId(id);
-//    }
 }
